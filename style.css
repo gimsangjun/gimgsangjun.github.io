@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  /* Background image 설정 */
+  /* The image used */
+  /* background-image: url("0.jpeg"); */
+
+  /* Full height */
+  height: 100vh;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hidden {
+  display: none;
+}
+
+h2 {
+  margin-bottom: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, 1fr);
+
+  align-items: center;
+  justify-items: center; /* adjusted */
+
+  grid-template-areas:
+    "weather "
+    "main-form"
+    "todo-form"
+    "todo-list"
+    "todo-list"
+    "quote ";
+}
+#main-form {
+  grid-area: main-form;
+}
+#clock {
+  text-align: center;
+}
+#greeting {
+  margin-top: 0;
+}
+
+#todo-form {
+  grid-area: todo-form;
+}
+#todo-list {
+  grid-area: todo-list;
+  color: white;
+}
+
+#quote {
+  grid-area: quote;
+}
+
+#weather {
+  grid-area: weather;
+  justify-self: end;
+  align-self: start;
+}
+
+#login-form {
+  grid-area: login-form;
+  text-align: center;
+  margin: auto;
+  width: 100%;
+}
+
+#login-form > input[type="text"]:nth-child(2) {
+  /*border: none; */
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  border-bottom: 2px solid #000;
+  background: transparent;
+}
